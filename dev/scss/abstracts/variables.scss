@@ -1,0 +1,18 @@
+// Colours
+$green:             #88CB1C;
+$charcoal:          #3A3A3A;
+$black:             #000000;
+$white:             #FFFFFF;
+$grey:              #EBEBE9;
+
+
+// Flex
+$grid-columns: 12;
+$gutter-width: 2rem;
+$outer-margin: 2rem;
+$flexboxgrid-breakpoints:
+  sm 48rem,
+  md 64rem,
+  lg 80rem,
+  xlg 90rem;
+$flexboxgrid-max-width: 1080px;

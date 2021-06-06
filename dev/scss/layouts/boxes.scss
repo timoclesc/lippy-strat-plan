@@ -1,0 +1,17 @@
+.box {
+    &--president {
+        @include pos(absolute, 0, 0, 0, 8.33333333%, -1);
+    }
+
+    &--green {
+        background-color: $green;
+    }
+
+    &--grey {
+        background-color: $grey;
+    }
+
+    &--full-bleed-right {
+
+    }
+}

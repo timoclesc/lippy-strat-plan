@@ -1,0 +1,17 @@
+$loop-count: 12;
+
+@for $i from 0 through $loop-count {
+    $margin:  $i * 1rem;
+    .mx#{$i} {
+        margin-top: $margin;
+        margin-bottom:  $margin;
+    }
+
+    .m-tx#{$i} {
+        margin-top: $margin;
+    }
+
+    .m-bx#{$i} {
+        margin-bottom: $margin;
+    }
+}

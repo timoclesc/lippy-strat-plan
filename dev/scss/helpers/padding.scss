@@ -1,0 +1,17 @@
+$loop-count: 12;
+
+@for $i from 0 through $loop-count {
+    $padding:  $i * 1rem;
+    .px#{$i} {
+        padding-top: $padding;
+        padding-bottom:  $padding;
+    }
+
+    .p-tx#{$i} {
+        padding-top: $padding;
+    }
+
+    .p-bx#{$i} {
+        padding-bottom: $padding;
+    }
+}

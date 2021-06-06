@@ -1,0 +1,12 @@
+.relative {
+    position: relative;
+}
+
+@mixin pos($pos: absolute, $top: null, $right: null, $bottom: null, $left: null, $z-index: inherit) {
+    position: $pos;
+    top: $top; 
+    left: $left;
+    bottom: $bottom;
+    right: $right;
+    z-index: $z-index;
+}
