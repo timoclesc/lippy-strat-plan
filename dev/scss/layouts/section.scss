@@ -1,0 +1,70 @@
+.section {
+    &--president { 
+        &:after { 
+            content: '';
+            @include pos(absolute, 0, -2 * $outer-margin, 0, -2 * $outer-margin, -1);
+            background-color: $green;
+
+            @media ($sm-min) {
+                left: 8.33333%;
+            }
+        }
+    }
+
+    &--history, &--results { 
+        .heading {
+            padding: 5rem  $gutter-width;
+
+            &:after { 
+                content: '';
+                background: $grey;
+                @include pos(absolute, 0, -1 * $gutter-width, 0, -1 * $gutter-width, $z-shapes);
+                width: calc(100% + #{$gutter-width} * 2);
+                height: 100%;
+            }
+        }
+    }
+
+    &--history {
+        .image { 
+            width: 80%;
+            margin: 0 auto;
+            @media ($sm-min) {
+                width: 100%;
+                margin-top: -50%;
+            }
+        }
+    }
+
+    &--results {
+        .heading:after {
+            background: $green;
+        }
+
+        .image-caption {
+            color: $charcoal;
+            background-color: $midgrey;
+            position: relative;
+            z-index: $z-caption;
+            padding: 2rem 2rem 2.5rem;
+            margin-left: 3rem;
+            width: 60%;
+        }
+
+        .bkg-shape:after {
+            content: '';
+            @include pos(absolute, 10rem, 34%, 10rem, 43%, $z-shapes);
+            background-color: $grey;
+            opacity: 0.5;
+
+        }
+    }
+
+    &--future {
+        &:after {
+            content: '';
+            @include pos(absolute, 0, 33%, 0, 0, $z-shapes);
+            background-color: $green;
+        }
+    }
+}

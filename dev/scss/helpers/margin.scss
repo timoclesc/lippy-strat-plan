@@ -11,7 +11,43 @@ $loop-count: 12;
         margin-top: $margin;
     }
 
+    .m-tx-#{$i} {
+        margin-top: -1 * $margin;
+    }
+
     .m-bx#{$i} {
         margin-bottom: $margin;
+    }
+
+    .m-bx-#{$i} {
+        margin-bottom: -1 * $margin;
+    }
+
+    @media ($sm-min) {
+        .m-sm-tx#{$i} {
+            margin-top: $margin;
+        }
+
+        .m-sm-tx-#{$i} {
+            margin-top: -1 * $margin;
+        }
+    
+        .m-sm-bx#{$i} {
+            margin-bottom: $margin;
+        }
+
+        .m-sm-bx-#{$i} {
+            margin-bottom: -1 * $margin;
+        }
+    }
+
+    @media ($md-min) {
+        .m-md-tx#{$i} {
+            margin-top: $margin;
+        }
+    
+        .m-md-bx#{$i} {
+            margin-bottom: $margin;
+        }
     }
 }

@@ -1,18 +1,32 @@
 // Colours
 $green:             #88CB1C;
-$charcoal:          #3A3A3A;
+$charcoal:          #303030;
 $black:             #000000;
 $white:             #FFFFFF;
 $grey:              #EBEBE9;
+$midgrey:           #cacaca;
 
 
+$z-shapes: -10;
+$z-caption: 10;
+
+$sm: 48rem;
+$md: 64rem;
+$lg: 80rem;
+$xlg: 90rem;
 // Flex
 $grid-columns: 12;
 $gutter-width: 2rem;
 $outer-margin: 2rem;
 $flexboxgrid-breakpoints:
-  sm 48rem,
-  md 64rem,
-  lg 80rem,
-  xlg 90rem;
+  sm #{$sm},
+  md #{$md},
+  lg #{$lg},
+  xlg #{$xlg};
 $flexboxgrid-max-width: 1080px;
+
+// Media
+$sm-min: 'min-width: #{$sm}';
+$md-min: 'min-width: #{$md}';
+$lg-min: 'min-width: #{$lg}';
+$xlg-min: 'min-width: #{$xlg}';

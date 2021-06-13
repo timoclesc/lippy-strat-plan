@@ -20,6 +20,7 @@
     "gulp-sass": "^4.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
+    "include-media": "^1.4.10",
     "node-sass": "^6.0.0",
     "postcss": "^8.3.0"
   },
@@ -30,6 +31,7 @@
   "dependencies": {
     "flexboxgrid-sass": "^8.0.5",
     "gulp-imageoptim": "^1.0.9",
-    "normalize-scss": "^7.0.1"
+    "normalize-scss": "^7.0.1",
+    "sass-mq": "^5.0.1"
   }
 }
