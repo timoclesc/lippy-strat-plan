@@ -13,7 +13,7 @@
 
     &--history, &--results { 
         .heading {
-            padding: 5rem  $gutter-width;
+            padding: 5rem  0;
 
             &:after { 
                 content: '';
@@ -28,8 +28,10 @@
     &--history {
         .image { 
             width: 80%;
+            max-width: 300px;
             margin: 0 auto;
             @media ($sm-min) {
+                max-width: none;
                 width: 100%;
                 margin-top: -50%;
             }
@@ -42,18 +44,25 @@
         }
 
         .image-caption {
+            display: inline-block;
+            font-size: 1.6rem;
             color: $charcoal;
             background-color: $midgrey;
             position: relative;
             z-index: $z-caption;
-            padding: 2rem 2rem 2.5rem;
+            padding: 1rem 2.5rem 1.5rem;
             margin-left: 3rem;
-            width: 60%;
+            margin-right: 3rem;
+            
+            @media ($sm-min) {
+                padding: 2rem 2rem 2.5rem;
+                width: 60%;
+            }
         }
 
         .bkg-shape:after {
             content: '';
-            @include pos(absolute, 10rem, 34%, 10rem, 43%, $z-shapes);
+            @include pos(absolute, 10rem, 34%, 10rem, 34%, $z-shapes);
             background-color: $grey;
             opacity: 0.5;
 
@@ -63,8 +72,48 @@
     &--future {
         &:after {
             content: '';
-            @include pos(absolute, 0, 33%, 0, 0, $z-shapes);
+            @include pos(absolute, 0, -1 * $outer-margin, 0, -1 * $outer-margin, $z-shapes);
             background-color: $green;
+
+            @media ($sm-min) {
+                right: 33%;
+                left: 0;
+            }
         }
+    }
+
+    &--aspirations { 
+        &:after {
+            content: '';
+            @include pos(absolute, 0 , -1 * $outer-margin, null , -1 * $outer-margin, $z-shapes);
+            height: 20rem;
+            background-color: $grey;
+            
+            @media ($sm-min) {
+                content: none;
+                // background-image: linear-gradient(
+                //     to right,
+                //     $white,
+                //     $white, 25%,
+                //     $grey 25%,
+                //     $grey 75%,
+                //     $white 75%,
+                //     $white
+                //   );
+                // background-size: 33.3333% 100%;
+                // background-repeat: repeat-x;
+                // height: auto;
+                // bottom: 0;
+                // right: 51.66666%;
+                // left: 10%;
+            }
+        }
+    }
+
+    &--grey {
+        background-color: $grey;
+    }
+    &--green {
+        background-color: $green;
     }
 }

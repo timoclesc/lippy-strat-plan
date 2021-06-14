@@ -18,3 +18,56 @@
     width: 100%;
     height: 100%;
 }
+
+.img__bk-square {
+    &:after {
+        @include pos(absolute, null, 50%, 50%, null, $z-shapes);
+        width: 150%;
+        height: 160%;
+        background-color: $grey;
+        opacity: 50%;
+
+        @media ($sm-min) {
+            content: '';
+        }
+    }
+
+    &--top-right:after {
+        height: 80%;
+        right: auto;
+        left: 30%;
+    }
+
+    &--bottom-left:after {
+        bottom: auto;
+        top: 40%;
+    }
+
+    &--bottom-right:after {
+        height: 110%;
+        bottom: auto;
+        right: auto;
+        top: 40%;
+        left: 30%;
+    }
+
+    &--bottom-center:after {
+        height: 100%;
+        bottom: auto;
+        top: 30%;
+        right: -30%;
+    }
+
+    &--left-center:after {
+        bottom: auto;
+        top: -30%;
+        right: 40%;
+    }
+
+    &--sm-left:after {
+        height: 130%;
+        bottom: auto;
+        top: 30%;
+        right: 30%;
+    }
+}

@@ -25,7 +25,7 @@ function scssTranspile() {
         .pipe(postcss([ autoprefixer() ]))
         .pipe(rename("core.css"))
         .pipe(sourcemaps.write())
-        .pipe(dest('dist'))
+        .pipe(dest('docs'))
         .pipe(browserSync.stream());
 }
 
@@ -33,7 +33,7 @@ function jsTranspile() {
 return src('dev/js/*.js')
     .pipe(babel())
     .pipe(uglify())
-    .pipe(dest('dist/'))
+    .pipe(dest('docs/'))
     .pipe(browserSync.stream());
 }
 
@@ -50,17 +50,17 @@ cb();
 function imageOptimise() {
     return src('dev/img/**.*')
     .pipe(imageOptim.optimize())
-    .pipe(dest('dist/img'))
+    .pipe(dest('docs/img'))
     .pipe(browserSync.stream());
 }
 
 function devServer() {
     browserSync.init({
         server: {
-            baseDir: "dist"
+            baseDir: "docs"
         }
     });
-    watch("dist/*.html").on('change', browserSync.reload);
+    watch("docs/*.html").on('change', browserSync.reload);
     watch('dev/**.js', series(jsTranspile, jsBundle, jsMinify));
     watch('dev/**/*.scss', scssTranspile);
     watch('dev/img/**.*', imageOptimise);

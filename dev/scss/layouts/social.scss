@@ -1,0 +1,22 @@
+.social {
+    &__container {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        
+        @media ($sm-min) {
+            align-items: flex-end;
+            justify-content: flex-end;
+        }
+    }
+    
+    &__button {
+        width: 3rem;
+        height: 3rem;
+        color: $green;
+
+        &:not(:last-child) {
+            margin-right: 3rem;
+        }
+    }
+}

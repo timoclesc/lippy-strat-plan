@@ -51,3 +51,15 @@ $loop-count: 12;
         }
     }
 }
+
+@media ($sm-min ) {
+    .col-sm-offset-0 {
+        margin-left: 0;
+    }
+}
+
+@media ($md-min ) {
+    .col-md-offset-0 {
+        margin-left: 0;
+    }
+}

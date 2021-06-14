@@ -16,14 +16,21 @@ $lg: 80rem;
 $xlg: 90rem;
 // Flex
 $grid-columns: 12;
-$gutter-width: 2rem;
-$outer-margin: 2rem;
+$gutter-width: 4rem;
+$outer-margin: 4rem;
 $flexboxgrid-breakpoints:
   sm #{$sm},
   md #{$md},
   lg #{$lg},
   xlg #{$xlg};
 $flexboxgrid-max-width: 1080px;
+
+
+// Transition 
+$transition-duration: 300ms;
+$transition-easing: ease-in-out;
+$transition-color: color $transition-easing $transition-duration;
+
 
 // Media
 $sm-min: 'min-width: #{$sm}';
