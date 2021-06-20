@@ -9,10 +9,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@animxyz/core": "^0.5.0",
     "@babel/core": "^7.14.3",
     "@babel/preset-env": "^7.14.4",
     "autoprefixer": "^10.2.6",
     "browser-sync": "^2.26.14",
+    "css-loader": "^5.2.6",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-postcss": "^9.0.0",
@@ -22,13 +24,15 @@
     "gulp-uglify": "^3.0.2",
     "include-media": "^1.4.10",
     "node-sass": "^6.0.0",
-    "postcss": "^8.3.0"
+    "postcss": "^8.3.0",
+    "webpack-stream": "^6.1.2"
   },
   "browserslist": [
     "defaults",
     "maintained node versions"
   ],
   "dependencies": {
+    "enter-view": "^2.0.1",
     "flexboxgrid-sass": "^8.0.5",
     "gulp-imageoptim": "^1.0.9",
     "normalize-scss": "^7.0.1",

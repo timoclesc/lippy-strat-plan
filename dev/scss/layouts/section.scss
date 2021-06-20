@@ -1,8 +1,8 @@
 .section {
     &--president { 
-        &:after { 
+        &:before { 
             content: '';
-            @include pos(absolute, 0, -2 * $outer-margin, 0, -2 * $outer-margin, -1);
+            @include pos(absolute, 0, -1 * $outer-margin, 0, -2 * $outer-margin, -1);
             background-color: $green;
 
             @media ($sm-min) {
@@ -14,14 +14,16 @@
     &--history, &--results { 
         .heading {
             padding: 5rem  0;
+            position: relative;
+            z-index: $z-caption;
+        }
 
-            &:after { 
-                content: '';
-                background: $grey;
-                @include pos(absolute, 0, -1 * $gutter-width, 0, -1 * $gutter-width, $z-shapes);
-                width: calc(100% + #{$gutter-width} * 2);
-                height: 100%;
-            }
+        .row--bkg:before {
+            content: '';
+            background: $grey;
+            @include pos(absolute, 0, -1 * $gutter-width, 0, -1 * $gutter-width);
+            width: calc(100% + #{$gutter-width} * 2);
+            height: 100%;
         }
     }
 
@@ -39,7 +41,7 @@
     }
 
     &--results {
-        .heading:after {
+        .row--bkg:before {
             background: $green;
         }
 
@@ -47,7 +49,7 @@
             display: inline-block;
             font-size: 1.6rem;
             color: $charcoal;
-            background-color: $midgrey;
+            background-color: $grey;
             position: relative;
             z-index: $z-caption;
             padding: 1rem 2.5rem 1.5rem;
@@ -60,7 +62,7 @@
             }
         }
 
-        .bkg-shape:after {
+        .bkg-shape:before {
             content: '';
             @include pos(absolute, 10rem, 34%, 10rem, 34%, $z-shapes);
             background-color: $grey;
@@ -70,7 +72,7 @@
     }
 
     &--future {
-        &:after {
+        &:before {
             content: '';
             @include pos(absolute, 0, -1 * $outer-margin, 0, -1 * $outer-margin, $z-shapes);
             background-color: $green;
@@ -91,21 +93,22 @@
             
             @media ($sm-min) {
                 content: none;
-                // background-image: linear-gradient(
-                //     to right,
-                //     $white,
-                //     $white, 25%,
-                //     $grey 25%,
-                //     $grey 75%,
-                //     $white 75%,
-                //     $white
-                //   );
-                // background-size: 33.3333% 100%;
-                // background-repeat: repeat-x;
-                // height: auto;
-                // bottom: 0;
-                // right: 51.66666%;
-                // left: 10%;
+            }
+        }
+
+        &--green { 
+            &:after {
+                background-color: $green;
+            }
+
+            &:before { 
+                content: '';
+                @include pos(absolute, 0, -1 * $outer-margin, 0, -2 * $outer-margin, $z-shapes);
+                background-color: $green;
+    
+                @media ($sm-min) {
+                    left: 56%;
+                }
             }
         }
     }
@@ -113,7 +116,24 @@
     &--grey {
         background-color: $grey;
     }
+    &--mid-grey {
+        background-color: $midgrey;
+    }
     &--green {
         background-color: $green;
     }
+    &--light-green {
+        background-color: $lightgreen;
+    }
+    &--white {
+        background-color: $white;
+    }
+    &--beige {
+        background-color: $beige;
+    }
+}
+
+.col--text {
+    position: relative;
+    z-index: $z-caption;
 }

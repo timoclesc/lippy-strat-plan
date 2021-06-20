@@ -1,0 +1,4 @@
+
+[xyz]:not(.xyz-in):not(.xyz-out):not([xyz*="stagger"]) {
+    opacity: 0;
+}

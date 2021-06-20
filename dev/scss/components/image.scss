@@ -20,7 +20,9 @@
 }
 
 .img__bk-square {
-    &:after {
+    z-index: $z-caption;
+    
+    &:before {
         @include pos(absolute, null, 50%, 50%, null, $z-shapes);
         width: 150%;
         height: 160%;
@@ -32,18 +34,18 @@
         }
     }
 
-    &--top-right:after {
+    &--top-right:before {
         height: 80%;
         right: auto;
         left: 30%;
     }
 
-    &--bottom-left:after {
+    &--bottom-left:before {
         bottom: auto;
         top: 40%;
     }
 
-    &--bottom-right:after {
+    &--bottom-right:before {
         height: 110%;
         bottom: auto;
         right: auto;
@@ -51,20 +53,20 @@
         left: 30%;
     }
 
-    &--bottom-center:after {
+    &--bottom-center:before {
         height: 100%;
         bottom: auto;
         top: 30%;
         right: -30%;
     }
 
-    &--left-center:after {
+    &--left-center:before {
         bottom: auto;
         top: -30%;
         right: 40%;
     }
 
-    &--sm-left:after {
+    &--sm-left:before {
         height: 130%;
         bottom: auto;
         top: 30%;

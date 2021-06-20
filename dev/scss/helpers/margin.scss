@@ -25,19 +25,19 @@ $loop-count: 12;
 
     @media ($sm-min) {
         .m-sm-tx#{$i} {
-            margin-top: $margin;
+            margin-top: $margin !important;
         }
 
         .m-sm-tx-#{$i} {
-            margin-top: -1 * $margin;
+            margin-top: -1 * $margin !important;
         }
     
         .m-sm-bx#{$i} {
-            margin-bottom: $margin;
+            margin-bottom: $margin !important;
         }
 
         .m-sm-bx-#{$i} {
-            margin-bottom: -1 * $margin;
+            margin-bottom: -1 * $margin !important;
         }
     }
 

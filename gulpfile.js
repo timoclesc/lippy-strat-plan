@@ -1,5 +1,6 @@
 const {series, parallel, src, dest, watch} = require('gulp');
 const browserSync = require('browser-sync').create();
+const webpackStream = require('webpack-stream');
 const babel = require('gulp-babel');
 const uglify= require('gulp-uglify');
 const sass = require('gulp-sass');
@@ -30,10 +31,20 @@ function scssTranspile() {
 }
 
 function jsTranspile() {
-return src('dev/js/*.js')
-    .pipe(babel())
-    .pipe(uglify())
-    .pipe(dest('docs/'))
+return src('./dev/js/core.js')
+    .pipe(webpackStream({
+        devtool: 'source-map',
+        entry: './dev/js/core.js',
+        mode: 'development',
+        output: {
+            filename: 'combined.min.js'
+        }
+    }))
+    // .pipe(babel({
+    //     presets: ['@babel/env']
+    // }))
+    // .pipe(uglify())
+    .pipe(dest('./docs/'))
     .pipe(browserSync.stream());
 }
 
@@ -61,7 +72,7 @@ function devServer() {
         }
     });
     watch("docs/*.html").on('change', browserSync.reload);
-    watch('dev/**.js', series(jsTranspile, jsBundle, jsMinify));
+    watch('dev/**/*.js', series(jsTranspile, jsBundle, jsMinify));
     watch('dev/**/*.scss', scssTranspile);
     watch('dev/img/**.*', imageOptimise);
 }

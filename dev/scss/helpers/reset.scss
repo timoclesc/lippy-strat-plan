@@ -17,3 +17,19 @@ h1, h2, h3, h4, h5, h6, p {
 .wrapper {
     overflow: hidden;
 }
+
+.container-fluid {
+    padding-left: $outer-margin * 0.5;
+    padding-right: $outer-margin * 0.5;
+
+    @media ($sm-min) {
+        padding-left: $outer-margin;
+        padding-right: $outer-margin;    
+    }
+
+    @media ($lg-min) {
+        padding-left: $outer-margin * 2;
+        padding-right: $outer-margin * 2;    
+    }
+}
+

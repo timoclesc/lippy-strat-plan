@@ -1,0 +1,1 @@
+"use strict";var _enterView=_interopRequireDefault(require("enter-view"));function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}(0,_enterView.default)({selector:"[xyz]",enter:function(e){e.classList.add("xyz-in"),e.classList.remove("xyz-out")},exit:function(e){e.classList.remove("xyz-in"),e.classList.add("xyz-out")},offset:.5,once:!0});
