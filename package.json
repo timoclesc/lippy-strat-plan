@@ -15,6 +15,7 @@
     "autoprefixer": "^10.2.6",
     "browser-sync": "^2.26.14",
     "css-loader": "^5.2.6",
+    "glob-parent": "^5.1.2",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-postcss": "^9.0.0",
@@ -25,6 +26,7 @@
     "include-media": "^1.4.10",
     "node-sass": "^6.0.0",
     "postcss": "^8.3.0",
+    "trim-newlines": "^3.0.1",
     "webpack-stream": "^6.1.2"
   },
   "browserslist": [
