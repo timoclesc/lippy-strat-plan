@@ -37,6 +37,7 @@
     "enter-view": "^2.0.1",
     "flexboxgrid-sass": "^8.0.5",
     "gulp-imageoptim": "^1.0.9",
+    "lazysizes": "^5.3.2",
     "normalize-scss": "^7.0.1",
     "sass-mq": "^5.0.1"
   }

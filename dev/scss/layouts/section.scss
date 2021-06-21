@@ -85,7 +85,7 @@
     }
 
     &--aspirations { 
-        &:after {
+        &:before {
             content: '';
             @include pos(absolute, 0 , -1 * $outer-margin, null , -1 * $outer-margin, $z-shapes);
             height: 20rem;
@@ -97,17 +97,13 @@
         }
 
         &--green { 
-            &:after {
+            &:before {
                 background-color: $green;
-            }
-
-            &:before { 
-                content: '';
-                @include pos(absolute, 0, -1 * $outer-margin, 0, -2 * $outer-margin, $z-shapes);
-                background-color: $green;
-    
+                
                 @media ($sm-min) {
-                    left: 56%;
+                    content: '';
+                    @include pos(absolute, 0, -1 * $outer-margin, 0, 56%, $z-shapes);
+                    height: 100%;
                 }
             }
         }

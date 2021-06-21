@@ -1,3 +1,4 @@
+import 'lazysizes';
 import enterView from 'enter-view';
 
 var animations = document.querySelectorAll('[xyz]');
