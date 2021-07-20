@@ -1,0 +1,17 @@
+.button {
+    display: inline-block;
+    padding: 10px 25px;
+    text-decoration: none;
+    background-color: $green;
+    color: $black;
+    border: 2px solid transparent;
+
+    &:hover, &:focus, &:active {
+        color: $black;
+    }
+
+    &:hover, &:focus {
+        border-color: $charcoal;
+        background-color: mix($green, $white, 80);
+    }
+}

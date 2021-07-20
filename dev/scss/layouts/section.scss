@@ -127,6 +127,14 @@
     &--beige {
         background-color: $beige;
     }
+
+    &--pad {
+        padding: 30px;
+
+        @media ($sm-min) {
+            padding: 60px;
+        }
+    }
 }
 
 .col--text {
